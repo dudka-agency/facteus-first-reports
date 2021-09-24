@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import FirstReport
+
+admin.site.register(FirstReport)

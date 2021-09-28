@@ -1,0 +1,92 @@
+body {
+  width: 210mm;
+  height: 297mm;
+  border: 1px solid #000; }
+
+.header {
+  display: flex;
+  justify-content: space-between; }
+  .header__left {
+    margin-top: 10px;
+    width: 500px; }
+    .header__left .title {
+      font-size: 28px;
+      background: -webkit-linear-gradient(270.64deg, #AE00FF -11.32%, #0049FF 116.24%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    .header__left .bottom {
+      margin-top: 10px;
+      color: #4B4444;
+      position: relative; }
+      .header__left .bottom .with-divider {
+        position: relative;
+        padding-left: 24px; }
+        .header__left .bottom .with-divider:before {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 12px;
+          background-color: #D8D8D8;
+          left: 12px;
+          bottom: 3px; }
+  .header__right img {
+    width: 200px;
+    height: 60px; }
+  .header__right span {
+    margin-left: 19px; }
+
+.content {
+  margin-top: 30px; }
+
+.blocks {
+  display: flex;
+  justify-content: space-between; }
+
+.block {
+  max-width: 25%;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative; }
+  .block .title {
+    font-size: 13px;
+    line-height: 9px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #9E9E9E;
+    margin-bottom: 10px; }
+  .block .info {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .block .info .percents {
+      font-size: 27px;
+      line-height: 23px;
+      text-align: right;
+      color: #57A229;
+      margin-right: 8px; }
+      .block .info .percents.negative {
+        color: #D3425E; }
+    .block .info .text .name {
+      font-size: 13px; }
+    .block .info .text .date {
+      color: #9E9E9E;
+      font-size: 12px; }
+  .block:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    background-color: #EBEBEB;
+    bottom: 0;
+    top: 0;
+    width: 1px; }
+  .block:first-child {
+    padding-left: 0; }
+  .block:last-child {
+    padding-right: 0; }
+    .block:last-child:after {
+      display: none; }
+
+.width-30 {
+  width: 300px; }
+
+/*# sourceMappingURL=main.css.map */

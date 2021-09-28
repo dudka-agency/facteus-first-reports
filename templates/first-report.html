@@ -38,7 +38,7 @@
     <body>
         <div class='wrapper'>
             <div class='header'>
-                <p class='title'>Invoice # </p>
+                <p class='title'>Invoice # {{invoice_id}}</p>
             </div>
         </div>
         <div class='details'>
@@ -46,6 +46,7 @@
             Amount: {{ amount }}<br/>
             Date: {{today }}
             <hr class='hrItem' />
+            Merchant: {{merchant}}
         </div>
     </body>
 </html>

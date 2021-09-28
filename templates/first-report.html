@@ -1,52 +1,222 @@
-<html>
+{% load sass_tags %}
+<html lang="en">
     <head>
-        <title>Title</title>
-        <style type="text/css">
-            body {
-                font-weight: 200;
-                font-size: 14px;
-            }
-            .header {
-                font-size: 20px;
-                font-weight: 100;
-                text-align: center;
-                color: #007cae;
-            }
-            .title {
-                font-size: 22px;
-                font-weight: 100;
-               /* text-align: right;*/
-               padding: 10px 20px 0px 20px;
-            }
-            .title span {
-                color: #007cae;
-            }
-            .details {
-                padding: 10px 20px 0px 20px;
-                text-align: left !important;
-                /*margin-left: 40%;*/
-            }
-            .hrItem {
-                border: none;
-                height: 1px;
-                /* Set the hr color */
-                color: #333; /* old IE */
-                background-color: #fff; /* Modern Browsers */
-            }
-        </style>
+        <title>First Report</title>
+        <link href="{% sass_src 'styles/main.scss' %}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div class='wrapper'>
-            <div class='header'>
-                <p class='title'>Invoice # {{invoice_id}}</p>
+            <div class="header">
+                <div class="header__left">
+                    <div class="title">Facteus Insight Report on Consumer Spending and Transactions (FIRST)</div>
+                    <div class="bottom"><span>28 September 2021</span><span class="with-divider">2021 vs 2019 Year over Year % Change</span></div>
+                </div>
+                <div class="header__right">
+                    <div>{% load static%}<img src="{% static 'img/logo.png' %}" alt=""></div>
+                    <span>Learn more at </span><a href="https://facteus.com">facteus.com</a>
+                </div>
             </div>
-        </div>
-        <div class='details'>
-            Bill to: {{ customer_name }}<br/>
-            Amount: {{ amount }}<br/>
-            Date: {{today }}
-            <hr class='hrItem' />
-            Merchant: {{merchant}}
+
+            <div class="content">
+                <div class="blocks">
+                    <div class="block">
+                        <div class="title">
+                            MOST POSITIVE TREND
+                        </div>
+                        <div class="info">
+                            <div class="percents">+76%</div>
+                            <div class="text">
+                                <div class="name">Video Games</div>
+                                <div class="date">22 August</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="title">
+                            SMALLEST DECLINE week
+                        </div>
+                        <div class="info">
+                            <div class="percents">18 Jul</div>
+                            <div class="text">
+                                <div class="name">avg</div>
+                                <div class="date">+14%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="title">
+                            MOST NEGATIVE TREND
+                        </div>
+                        <div class="info">
+                            <div class="percents negative">-76%</div>
+                            <div class="text">
+                                <div class="name">Cruise Lines</div>
+                                <div class="date">8 August</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="title">
+                            LARGEST DECLINE week
+                        </div>
+                        <div class="info">
+                            <div class="percents negative">1 Aug</div>
+                            <div class="text">
+                                <div class="name">avg</div>
+                                <div class="date">+2%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="blueTable">
+                    <thead>
+                    <tr>
+                        <th class="width-30"></th>
+                        <th colspan="2">2</th>
+                        <th colspan="5">3</th>
+                        <th colspan="4">4</th>
+                    </tr>
+                    <tr>
+                        <th class="width-30"></th>
+                        <th colspan="2">22</th>
+                        <th colspan="5">33</th>
+                        <th colspan="4">44</th>
+                    </tr>
+                    <tr>
+                        <th class="width-30"></th>
+                        <th>18</th>
+                        <th>25</th>
+                        <th>1</th>
+                        <th>8</th>
+                        <th>15</th>
+                        <th>22</th>
+                        <th>29</th>
+                        <th>5</th>
+                        <th>12</th>
+                        <th>19</th>
+                        <th>26</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    </tfoot>
+                    <tbody>
+                    <tr>
+                        <td class="width-30">Retail</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="width-30">1</td>
+                        <td>2_1</td>
+                        <td>3_1</td>
+                        <td>4_1</td>
+                        <td>5_1</td>
+                        <td>6_1</td>
+                        <td>7_1</td>
+                        <td>8_1</td>
+                        <td>9_1</td>
+                        <td>10_1</td>
+                        <td>11_1</td>
+                        <td>12_1</td>
+                    </tr>
+
+                    <tr>
+                        <td class="width-30">Department Stores</td>
+                        <td>2_1</td>
+                        <td>3_1</td>
+                        <td>4_1</td>
+                        <td>5_1</td>
+                        <td>6_1</td>
+                        <td>7_1</td>
+                        <td>8_1</td>
+                        <td>9_1</td>
+                        <td>10_1</td>
+                        <td>11_1</td>
+                        <td>12_1</td>
+                    </tr>
+                    <tr>
+                        <td class="width-30">Discount Stores</td>
+                        <td>2_2</td>
+                        <td>3_2</td>
+                        <td>4_2</td>
+                        <td>5_2</td>
+                        <td>6_2</td>
+                        <td>7_2</td>
+                        <td>8_2</td>
+                        <td>9_2</td>
+                        <td>10_2</td>
+                        <td>11_2</td>
+                        <td>12_2</td>
+                    </tr>
+                    <tr>
+                        <td class="width-30">Grocery Stores & Supermarkets</td>
+                        <td>2_3</td>
+                        <td>3_3</td>
+                        <td>4_3</td>
+                        <td>5_3</td>
+                        <td>6_3</td>
+                        <td>7_3</td>
+                        <td>8_3</td>
+                        <td>9_3</td>
+                        <td>10_3</td>
+                        <td>11_3</td>
+                        <td>12_3</td>
+                    </tr>
+                    <tr>
+                        <td class="width-30">Variety Stores</td>
+                        <td>2_4</td>
+                        <td>3_4</td>
+                        <td>4_4</td>
+                        <td>5_4</td>
+                        <td>6_4</td>
+                        <td>7_4</td>
+                        <td>8_4</td>
+                        <td>9_4</td>
+                        <td>10_4</td>
+                        <td>11_4</td>
+                        <td>12_4</td>
+                    </tr>
+                    <tr>
+                        <td class="width-30">Wholesale Clubs</td>
+                        <td>2_5</td>
+                        <td>3_5</td>
+                        <td>4_5</td>
+                        <td>5_5</td>
+                        <td>6_5</td>
+                        <td>7_5</td>
+                        <td>8_5</td>
+                        <td>9_5</td>
+                        <td>10_5</td>
+                        <td>11_5</td>
+                        <td>12_5</td>
+                    </tr>
+                    <tr>
+                        <td class="width-30 results">Retail Average</td>
+                        <td>2_6</td>
+                        <td>3_6</td>
+                        <td>4_6</td>
+                        <td>5_6</td>
+                        <td>6_6</td>
+                        <td>7_6</td>
+                        <td>8_6</td>
+                        <td>9_6</td>
+                        <td>10_6</td>
+                        <td>11_6</td>
+                        <td>12_6</td>
+                    </tr>
+                    </tbody>
+                    </table>
+            </div>
         </div>
     </body>
 </html>

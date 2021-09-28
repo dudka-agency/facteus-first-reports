@@ -1,0 +1,121 @@
+body {
+  width: 210mm;
+  height: 297mm;
+  border: 1px solid #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    .title {
+      font-size: 28px;
+      background: -webkit-linear-gradient(270.64deg, #AE00FF -11.32%, #0049FF 116.24%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bottom {
+      margin-top: 10px;
+      color: #4B4444;
+      position: relative;
+      .with-divider {
+        position: relative;
+        padding-left: 24px;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 12px;
+          background-color: #D8D8D8;
+          left: 12px;
+          bottom: 3px;
+        }
+      }
+    }
+    margin-top: 10px;
+    width: 500px;
+  }
+  &__right {
+    img {
+      width: 200px;
+      height: 60px;
+    }
+    span {
+      margin-left: 19px;
+    }
+  }
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.blocks {
+  display: flex;
+  justify-content: space-between;
+}
+.block {
+  max-width: 25%;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+  .title {
+    font-size: 13px;
+    line-height: 9px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #9E9E9E;
+    margin-bottom: 10px;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .percents {
+      font-size: 27px;
+      line-height: 23px;
+      text-align: right;
+      color: #57A229;
+      margin-right: 8px;
+      &.negative {
+        color: #D3425E;
+      }
+    }
+    .text {
+      .name {
+        font-size: 13px;
+      }
+      .date {
+        color: #9E9E9E;
+        font-size: 12px;
+      }
+    }
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    background-color: #EBEBEB;
+    bottom: 0;
+    top: 0;
+    width: 1px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.width {
+  &-30 {
+    width: 300px;
+  }
+}

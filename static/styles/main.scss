@@ -117,5 +117,36 @@ body {
 .width {
   &-30 {
     width: 300px;
+    text-align: left;
+  }
+}
+
+table {
+  margin-top: 30px;
+}
+th, td {
+  text-align: right;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.head {
+  &-row {
+    &-top {
+      font-weight: bold;
+    }
+    &-bottom {
+      color: #8CBE20;
+      &__item {
+        font-size: 12px;
+      }
+    }
+    &-dates {
+      font-weight: 600;
+      th {
+        border-bottom: 1px solid red;
+        border-top: 1px solid red;
+      }
+    }
   }
 }

@@ -87,6 +87,27 @@ body {
       display: none; }
 
 .width-30 {
-  width: 300px; }
+  width: 300px;
+  text-align: left; }
+
+table {
+  margin-top: 30px; }
+
+th, td {
+  text-align: right;
+  font-size: 14px;
+  padding: 0 10px; }
+
+.head-row-top {
+  font-weight: bold; }
+
+.head-row-bottom {
+  color: #8CBE20; }
+  .head-row-bottom__item {
+    font-size: 12px; }
+
+.head-row-dates {
+  font-weight: 600;
+  border-bottom: 1px solid red; }
 
 /*# sourceMappingURL=main.css.map */
